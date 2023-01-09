@@ -1,5 +1,14 @@
 const container = document.querySelector('#container');
 
+
+//Button Allows Size & Colour Change
+document.querySelector('#btn').addEventListener('click', newGrid);
+
+function newGrid() {
+    makeCells(16, 16, 'orange');
+}
+
+
 //Creates Cell Grid
 function makeCells(col, rows, e) {
         //Creates Cells
@@ -16,4 +25,3 @@ function makeCells(col, rows, e) {
         }
 }
 
-makeCells(16, 16, '#0000ff');
