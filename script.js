@@ -5,7 +5,12 @@ const container = document.querySelector('#container');
 document.querySelector('#btn').addEventListener('click', newGrid);
 
 function newGrid() {
-    makeCells(16, 16, 'orange');
+    let size = prompt('Please Choose a Grid Size');
+    let colour = prompt('Please Choose a Colour');
+    colour.toString; 
+    let col = size;
+    let rows = size; 
+    makeCells(col, rows, colour);
 }
 
 
