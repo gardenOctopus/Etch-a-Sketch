@@ -8,18 +8,18 @@ function newGrid() {
     let size = prompt('Please Choose a Grid Size');
     let colour = prompt('Please Choose a Colour');
     colour.toString; 
-    makeCells(size, size, colour);
+    makeCells(size, colour);
 }
 
 
 //Creates Cell Grid
-function makeCells(col, rows, e) {
+function makeCells(col, e) {
         //Creates Cells
-        for (i = 0; i < (col * rows); i++) {
+        for (i = 0; i < col; i++) {
             let cell = document.createElement('div');
             container.appendChild(cell);
             //Styles Cells
-            cell.setAttribute('style', 'border-style: solid; border-color: #507b9c; border-width: 1px; width: 25px; height: 25px;');
+            cell.setAttribute('style', 'border-style: solid; border-color: #507b9c; border-width: 1px; width: 100%; height: 100%;');
             //Sets Hover Event
             cell.addEventListener('mouseover', () => hoverColour(e));
             function hoverColour(e) {
