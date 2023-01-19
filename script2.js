@@ -11,20 +11,20 @@ function newGrid() {
     makeCells(size, colour);
 }
 
-
 //Creates Cell Grid
-function makeCells(col, e) {
-        //Creates Cells
-        for (i = 0; i < col; i++) {
-            let cell = document.createElement('div');
-            container.appendChild(cell);
-            //Styles Cells
-            cell.setAttribute('style', 'border-style: solid; border-color: #507b9c; border-width: 1px; width: 100%; height: 100%;');
-            //Sets Hover Event
-            cell.addEventListener('mouseover', () => hoverColour(e));
-            function hoverColour(e) {
-                cell.style.backgroundColor = e;
-            }
+function makeCells(size, e) {
+    let cellNum = size * size;
+    //Creates Cells
+    for (let i = 0; i < cellNum; i++) {
+        let cell = document.createElement('div');
+        container.append(cell);
+        //Styles Cells
+        cell.setAttribute('style', 'border-style: solid; border-color: #507b9c; border-width: 1px; width: 100%; height: 100%;');
+        //Sets Hover Event
+        cell.addEventListener('mouseover', () => hoverColour(e));
+        function hoverColour(e) {
+            cell.style.backgroundColor = e;
         }
+    }
+    container.setAttribute(`style`, `grid-template-columns: repeat(${size},1fr)`);        
 }
-

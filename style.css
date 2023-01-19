@@ -30,8 +30,7 @@ button:hover {
 }
 
 #container {
-    display: flex;
-    flex-direction: column;
+    display: grid; 
     /*flex-wrap: wrap;*/
     height: 432px;
     width: 432px;
