@@ -13,9 +13,13 @@ function resetContent() {
 function newGrid() {
     resetContent();
     let size = prompt('Please Choose a Grid Size');
-    let colour = prompt('Please Choose a Colour');
-    colour.toString; 
-    makeCells(size, colour);
+    if (size > 100) {
+        alert('Please choose a smaller size!')
+    } else {
+        let colour = prompt('Please Choose a Colour');
+        colour.toString; 
+        makeCells(size, colour);
+    }
 }
 
 //Creates Cell Grid
