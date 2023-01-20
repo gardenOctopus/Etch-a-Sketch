@@ -4,7 +4,14 @@ const container = document.querySelector('#container');
 //Button Allows Size & Colour Change
 document.querySelector('#btn').addEventListener('click', newGrid);
 
+//Removes Old Grid
+function resetContent() {
+    document.getElementById('container').innerHTML = "";
+}
+
+//Asks User for Grid Size & Colour
 function newGrid() {
+    resetContent();
     let size = prompt('Please Choose a Grid Size');
     let colour = prompt('Please Choose a Colour');
     colour.toString; 
